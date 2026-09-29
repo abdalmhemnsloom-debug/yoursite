@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YourSit - Websites Built for Modern Businesses</title>
+  <meta name="description" content="YourSit designs and builds modern, professional websites that help businesses build trust and stand out online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">Y</div>
+        <span>Your<span class="gradient-text">Sit</span></span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#portfolio" data-i18n="nav.work">Work</a>
+        <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch Language">عربي</button>
+        <a href="#contact" class="btn-cta" data-i18n="nav.cta">Get a Quote</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span data-i18n="hero.badge">Now Accepting New Clients</span>
+        </div>
+        <h1 class="hero-title">
+          <span data-i18n="hero.title1">Your Business.</span><br/>
+          <span class="gradient-text" data-i18n="hero.title2">Your Website.</span>
+        </h1>
+        <p class="hero-desc" data-i18n="hero.desc">
+          We design and build modern, professional websites that help businesses build trust and stand out online.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+            <span data-i18n="hero.ctaPrimary">Start Your Project</span> →
+          </a>
+          <a href="#portfolio" class="btn-secondary">
+            <span data-i18n="hero.ctaSecondary">View Our Work</span>
+          </a>
+        </div>
+
+        <div class="hero-value-points">
+          <div class="value-point">
+            <div class="value-icon">🎨</div>
+            <span data-i18n="hero.vp1">Modern Design</span>
+          </div>
+          <div class="value-point">
+            <div class="value-icon">📱</div>
+            <span data-i18n="hero.vp2">Mobile Ready</span>
+          </div>
+          <div class="value-point">
+            <div class="value-icon">🏢</div>
+            <span data-i18n="hero.vp3">Built Around Your Business</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-mockup">
+          <div class="mockup-header">
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+            <div class="mockup-dot"></div>
+            <div class="mockup-url">yoursit.com</div>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-line"></div>
+            <div class="mockup-line"></div>
+            <div class="mockup-line"></div>
+            <div class="mockup-line"></div>
+            <div class="mockup-blocks">
+              <div class="mockup-block"></div>
+              <div class="mockup-block"></div>
+              <div class="mockup-block"></div>
+              <div class="mockup-block"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-element floating-element-1">
+          ⚡ <span data-i18n="hero.float1">Fast Loading</span>
+        </div>
+        <div class="floating-element floating-element-2">
+          📱 <span data-i18n="hero.float2">Responsive</span>
+        </div>
+        <div class="floating-element floating-element-3">
+          🔒 <span data-i18n="hero.float3">Secure</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <span data-i18n="services.badge">What We Do</span>
+        </div>
+        <h2 class="section-title" data-i18n="services.title">Websites Built for Your Business</h2>
+        <p class="section-desc" data-i18n="services.desc">From design to launch, we create professional websites tailored to your business and your customers.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon icon-purple">🎨</div>
+          <h3 data-i18n="services.s1.title">Website Design</h3>
+          <p data-i18n="services.s1.desc">Modern and professional website designs tailored to your brand and customers.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon icon-teal">📱</div>
+          <h3 data-i18n="services.s2.title">Responsive Websites</h3>
+          <p data-i18n="services.s2.desc">Websites designed to look great and work smoothly on phones, tablets, and computers.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon icon-green">💬</div>
+          <h3 data-i18n="services.s3.title">WhatsApp & Contact Integration</h3>
+          <p data-i18n="services.s3.desc">Make it easy for customers to contact your business through WhatsApp, forms, and direct contact options.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon icon-orange">🌐</div>
+          <h3 data-i18n="services.s4.title">Domain & Hosting Setup</h3>
+          <p data-i18n="services.s4.desc">We help set up your domain and hosting so your website can go live properly.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon icon-blue">🔧</div>
+          <h3 data-i18n="services.s5.title">Maintenance & Updates</h3>
+          <p data-i18n="services.s5.desc">We can keep your website updated and make changes when your business needs them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <span data-i18n="portfolio.badge">Our Work</span>
+        </div>
+        <h2 class="section-title" data-i18n="portfolio.title">Website Concepts</h2>
+        <p class="section-desc" data-i18n="portfolio.desc">Explore examples of what we can create for different types of businesses.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card reveal" id="portfolio-card-1">
+          <div class="portfolio-thumb">
+            <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&q=80" alt="AutoCare - Automotive Service Center Website Concept" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-overlay-text concept-badge" data-i18n="portfolio.conceptLabel">CONCEPT / DEMO</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-concept-tag" data-i18n="portfolio.conceptLabel">CONCEPT / DEMO</div>
+            <h3 data-i18n="portfolio.p1.title">AutoCare</h3>
+            <p data-i18n="portfolio.p1.desc">Website concept for an automotive service center</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" id="portfolio-card-2">
+          <div class="portfolio-thumb">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80" alt="Brew House - Coffee Shop Website Concept" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-overlay-text concept-badge" data-i18n="portfolio.conceptLabel">CONCEPT / DEMO</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-concept-tag" data-i18n="portfolio.conceptLabel">CONCEPT / DEMO</div>
+            <h3 data-i18n="portfolio.p2.title">Brew House</h3>
+            <p data-i18n="portfolio.p2.desc">Website concept for a modern coffee shop</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" id="portfolio-card-3">
+          <div class="portfolio-thumb">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80" alt="FitZone - Fitness Business Website Concept" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-overlay-text concept-badge" data-i18n="portfolio.conceptLabel">CONCEPT / DEMO</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-concept-tag" data-i18n="portfolio.conceptLabel">CONCEPT / DEMO</div>
+            <h3 data-i18n="portfolio.p3.title">FitZone</h3>
+            <p data-i18n="portfolio.p3.desc">Website concept for a fitness business</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" id="portfolio-card-4">
+          <div class="portfolio-thumb">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Prime Properties - Real Estate Website Concept" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-overlay-text concept-badge" data-i18n="portfolio.conceptLabel">CONCEPT / DEMO</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-concept-tag" data-i18n="portfolio.conceptLabel">CONCEPT / DEMO</div>
+            <h3 data-i18n="portfolio.p4.title">Prime Properties</h3>
+            <p data-i18n="portfolio.p4.desc">Website concept for a real estate business</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <span data-i18n="process.badge">How We Work</span>
+        </div>
+        <h2 class="section-title" data-i18n="process.title">A Simple Process</h2>
+        <p class="section-desc" data-i18n="process.desc">From idea to launch in four clear steps.</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-number">1</div>
+          <h3 data-i18n="process.step1.title">Tell Us What You Need</h3>
+          <p data-i18n="process.step1.desc">We learn about your business, goals, services, and customers.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-number">2</div>
+          <h3 data-i18n="process.step2.title">We Build</h3>
+          <p data-i18n="process.step2.desc">We design and build your website around your business and brand.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-number">3</div>
+          <h3 data-i18n="process.step3.title">You Review</h3>
+          <p data-i18n="process.step3.desc">You review the website and request any necessary changes.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-number">4</div>
+          <h3 data-i18n="process.step4.title">We Launch</h3>
+          <p data-i18n="process.step4.desc">Once everything is approved, we help get your website online.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING (Simple Quote Section) ===== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing-simple reveal">
+        <div class="section-badge">
+          <span data-i18n="pricing.badge">Pricing</span>
+        </div>
+        <h2 class="section-title" data-i18n="pricing.title">Simple, Clear Pricing</h2>
+        <p class="pricing-simple-desc" data-i18n="pricing.desc">Every business is different. Tell us what you need and we'll provide a clear quote based on your website and requirements.</p>
+        <div class="pricing-checks">
+          <div class="pricing-check-item">
+            <span class="check-icon">✓</span>
+            <span data-i18n="pricing.check1">Clear Scope</span>
+          </div>
+          <div class="pricing-check-item">
+            <span class="check-icon">✓</span>
+            <span data-i18n="pricing.check2">No Hidden Fees</span>
+          </div>
+          <div class="pricing-check-item">
+            <span class="check-icon">✓</span>
+            <span data-i18n="pricing.check3">Built Around Your Needs</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn-primary pricing-quote-btn">
+          <span data-i18n="pricing.cta">Get a Quote</span> →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA (replaces testimonials) ===== -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2 class="section-title" data-i18n="cta.title">Ready to Build Your Website?</h2>
+        <p data-i18n="cta.desc">Let's create a professional online presence for your business.</p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn-primary">
+            <span data-i18n="cta.button">Start Your Project</span> →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <span data-i18n="faq.badge">FAQ</span>
+        </div>
+        <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+        <p class="section-desc" data-i18n="faq.desc">Got questions? We've got answers.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span data-i18n="faq.q1.question">How long does it take to build a website?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faq.q1.answer">
+              Timing depends on the size and requirements of the website. After discussing your project, we'll give you an estimated timeline.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span data-i18n="faq.q2.question">Do I need a domain and hosting?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faq.q2.answer">
+              Yes, a live website normally needs a domain and hosting. We can help you set them up.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span data-i18n="faq.q3.question">Can you build a website for my type of business?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faq.q3.answer">
+              We can create websites for many types of businesses, including restaurants, automotive businesses, gyms, real estate, services, and small businesses.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span data-i18n="faq.q4.question">Can I request changes before the website goes live?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faq.q4.answer">
+              Yes. You can review the website and request changes before the final launch.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span data-i18n="faq.q5.question">What happens after the website is launched?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faq.q5.answer">
+              We can help with updates, maintenance, and future changes if needed.
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info reveal">
+          <div class="section-badge">
+            <span data-i18n="contact.badge">Get In Touch</span>
+          </div>
+          <h2 class="section-title" data-i18n="contact.title">Let's Build Your Website</h2>
+          <p data-i18n="contact.desc">Tell us about your business and what you need. We'll get back to you to discuss your project.</p>
+
+          <div class="contact-methods">
+            <a href="mailto:yoursite.jo@gmail.com" class="contact-method contact-method-link">
+              <div class="contact-method-icon">📧</div>
+              <div class="contact-method-text">
+                <h4 data-i18n="contact.emailLabel">Email</h4>
+                <p>yoursite.jo@gmail.com</p>
+              </div>
+            </a>
+            <a href="https://wa.me/962795924005" target="_blank" rel="noopener noreferrer" class="contact-method contact-method-link whatsapp-link">
+              <div class="contact-method-icon whatsapp-icon">💬</div>
+              <div class="contact-method-text">
+                <h4 data-i18n="contact.whatsappLabel">WhatsApp</h4>
+                <p dir="ltr">+962 79 592 4005</p>
+              </div>
+            </a>
+          </div>
+
+          <a href="https://wa.me/962795924005" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+            <span>💬</span>
+            <span data-i18n="contact.whatsappBtn">Chat on WhatsApp</span>
+          </a>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="contactName" data-i18n="contact.form.name">Name</label>
+            <input type="text" id="contactName" required aria-describedby="err-name" autocomplete="name" />
+            <span class="field-error" id="err-name" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="businessName" data-i18n="contact.form.businessName">Business Name</label>
+            <input type="text" id="businessName" required aria-describedby="err-business" />
+            <span class="field-error" id="err-business" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail" data-i18n="contact.form.email">Email</label>
+            <input type="email" id="contactEmail" required aria-describedby="err-email" autocomplete="email" dir="ltr" />
+            <span class="field-error" id="err-email" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="whatsapp" data-i18n="contact.form.whatsapp">WhatsApp Number</label>
+            <input type="tel" id="whatsapp" dir="ltr" required aria-describedby="err-whatsapp" autocomplete="tel" />
+            <span class="field-error" id="err-whatsapp" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="businessType" data-i18n="contact.form.businessType">What does your business do?</label>
+            <input type="text" id="businessType" required aria-describedby="err-businesstype" />
+            <span class="field-error" id="err-businesstype" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="websiteType" data-i18n="contact.form.websiteType">What type of website do you need?</label>
+            <select id="websiteType" required aria-describedby="err-websitetype">
+              <option value="" data-i18n="contact.form.selectType">Select an option</option>
+              <option value="business" data-i18n="contact.form.optBusiness">Business Website</option>
+              <option value="landing" data-i18n="contact.form.optLanding">Landing Page</option>
+              <option value="ecommerce" data-i18n="contact.form.optEcom">Online Store</option>
+              <option value="portfolio" data-i18n="contact.form.optPortfolio">Portfolio</option>
+              <option value="other" data-i18n="contact.form.optOther">Other</option>
+            </select>
+            <span class="field-error" id="err-websitetype" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="details" data-i18n="contact.form.details">Additional Details</label>
+            <textarea id="details" rows="4" required aria-describedby="err-details"></textarea>
+            <span class="field-error" id="err-details" role="alert"></span>
+          </div>
+          <button type="submit" class="submit-btn" data-i18n="contact.form.submit">Send Request →</button>
+          <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="logo-icon">Y</div>
+            <span>Your<span class="gradient-text">Sit</span></span>
+          </a>
+          <p data-i18n="footer.desc">Modern websites for modern businesses.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.linksTitle">Links</h4>
+          <ul>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#portfolio" data-i18n="nav.work">Work</a></li>
+            <li><a href="#process" data-i18n="nav.process">Process</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.contactTitle">Contact</h4>
+          <ul>
+            <li><a href="mailto:yoursite.jo@gmail.com">yoursite.jo@gmail.com</a></li>
+            <li><a href="https://wa.me/962795924005" target="_blank" rel="noopener noreferrer" dir="ltr">+962 79 592 4005</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 YourSit. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

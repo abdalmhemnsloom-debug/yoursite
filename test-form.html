@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Web3Forms - Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 60px auto; padding: 20px; background: #0a0a0f; color: #f0f0f5; }
+    #result { margin-top: 20px; padding: 20px; border-radius: 8px; font-size: 1.1rem; line-height: 1.7; }
+    .success { background: rgba(0,206,201,0.12); border: 1px solid rgba(0,206,201,0.4); color: #55efc4; }
+    .error   { background: rgba(253,121,168,0.12); border: 1px solid rgba(253,121,168,0.4); color: #fd79a8; }
+    .loading { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #a0a0b8; }
+    pre { white-space: pre-wrap; font-size: 0.85rem; margin-top: 10px; opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <h2>🧪 اختبار نموذج Web3Forms</h2>
+  <p>يتم إرسال طلب تجريبي إلى <strong>yoursite.jo@gmail.com</strong> الآن...</p>
+  <div id="result" class="loading">⏳ جارٍ الاختبار...</div>
+
+  <script>
+    const payload = {
+      access_key:              "10182a12-ec99-40e7-832b-627cc5bb1126",
+      subject:                 "اختبار - طلب موقع جديد - YourSit",
+      from_name:               "YourSit Test",
+      message:                 "طلب موقع جديد\n\nالاسم: اختبار النموذج\nاسم العمل: شركة تجريبية\nرقم واتساب: +962799999999\nنوع العمل: تصميم مواقع\nنوع الموقع المطلوب: موقع أعمال\nالتفاصيل الإضافية: هذا اختبار تلقائي للتأكد من وصول البريد",
+      "الاسم":                 "اختبار النموذج",
+      "اسم العمل":             "شركة تجريبية",
+      "رقم واتساب":            "+962799999999",
+      "نوع العمل":             "تصميم مواقع",
+      "نوع الموقع المطلوب":    "موقع أعمال",
+      "التفاصيل الإضافية":     "هذا اختبار تلقائي للتأكد من وصول البريد"
+    };
+
+    const el = document.getElementById("result");
+
+    fetch("https://api.web3forms.com/submit", {
+      method:  "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body:    JSON.stringify(payload)
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.success) {
+        el.className = "success";
+        el.innerHTML = `
+          <strong>✅ تم الإرسال بنجاح!</strong><br>
+          النموذج يعمل بشكل صحيح.<br>
+          تحقق من بريدك: <strong>yoursite.jo@gmail.com</strong>
+          <pre>${JSON.stringify(data, null, 2)}</pre>
+        `;
+      } else {
+        el.className = "error";
+        el.innerHTML = `
+          <strong>❌ فشل الإرسال</strong><br>
+          <pre>${JSON.stringify(data, null, 2)}</pre>
+        `;
+      }
+    })
+    .catch(err => {
+      el.className = "error";
+      el.innerHTML = `
+        <strong>❌ خطأ في الاتصال</strong><br>
+        <pre>${err.toString()}</pre>
+      `;
+    });
+  </script>
+</body>
+</html>
