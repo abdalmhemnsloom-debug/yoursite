@@ -301,6 +301,12 @@ button {
   gap: var(--space-lg);
 }
 
+/* Hidden on desktop — only visible inside the mobile drawer */
+.nav-drawer-cta {
+  display: none;
+}
+
+
 .nav-links a {
   font-size: var(--fs-small);
   font-weight: 500;
@@ -357,12 +363,16 @@ body.rtl .nav-links a::after {
 }
 
 .btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 24px;
   border-radius: var(--radius-full);
   background: var(--clr-gradient-1);
   background-size: 200% 200%;
   font-size: var(--fs-small);
   font-weight: 600;
+  white-space: nowrap;          /* ← text NEVER wraps */
   color: #fff;
   transition: var(--transition-smooth);
   position: relative;
@@ -527,6 +537,7 @@ body.rtl .nav-links a::after {
 .btn-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 14px 32px;
   border-radius: var(--radius-full);
@@ -535,6 +546,8 @@ body.rtl .nav-links a::after {
   animation: gradient-shift 4s ease infinite;
   font-size: 1rem;
   font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;          /* ← text NEVER wraps */
   color: #fff;
   transition: var(--transition-smooth);
   box-shadow: var(--shadow-glow);
@@ -548,6 +561,7 @@ body.rtl .nav-links a::after {
 .btn-secondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 14px 32px;
   border-radius: var(--radius-full);
@@ -555,6 +569,8 @@ body.rtl .nav-links a::after {
   border: 1px solid var(--clr-border-hover);
   font-size: 1rem;
   font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;          /* ← text NEVER wraps */
   color: var(--clr-text);
   transition: var(--transition-smooth);
 }
@@ -1478,11 +1494,42 @@ body.rtl .faq-question {
   color: var(--clr-text-muted);
 }
 
-/* --- Responsive --- */
+/* ===========================================
+   RESPONSIVE DESIGN SYSTEM
+   Mobile-first, comprehensive breakpoints
+   =========================================== */
+
+/* --- Global overflow guard --- */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* All images & media: never exceed container */
+img, video, iframe, embed {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   TABLET (≤1024px)
+   ========================================= */
 @media (max-width: 1024px) {
+
+  .container {
+    padding: 0 var(--space-lg);
+  }
+
+  /* Hero: stack vertically */
   .hero .container {
     flex-direction: column;
     text-align: center;
+    gap: var(--space-2xl);
+  }
+
+  .hero-content {
+    max-width: 640px;
+    margin: 0 auto;
   }
 
   .hero-desc {
@@ -1496,6 +1543,7 @@ body.rtl .faq-question {
   .hero-value-points {
     justify-content: center;
     flex-wrap: wrap;
+    gap: var(--space-lg);
   }
 
   .services-grid {
@@ -1523,7 +1571,71 @@ body.rtl .faq-question {
   }
 }
 
+/* =========================================
+   MOBILE (≤768px)
+   ========================================= */
 @media (max-width: 768px) {
+
+  /* ── Global ── */
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .services,
+  .portfolio,
+  .process,
+  .pricing,
+  .cta-section,
+  .faq,
+  .contact {
+    padding: 4rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+  }
+
+  /* ── Navigation ──
+     Strategy: logo | lang | hamburger only.
+     The "Get a Quote" CTA is hidden from the bar
+     and moved into the open drawer instead,
+     so the bar never overflows on any screen width.
+  */
+  .navbar .container {
+    padding: 0 1.25rem;
+    gap: 0.5rem;
+  }
+
+  /* Hide desktop CTA from the narrow navbar bar */
+  .nav-actions .btn-cta {
+    display: none;
+  }
+
+  .lang-toggle {
+    padding: 7px 13px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .nav-logo {
+    font-size: 1.15rem;
+  }
+
+  .nav-logo .logo-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  /* Full-screen drawer */
   .nav-links {
     display: none;
     position: fixed;
@@ -1531,9 +1643,11 @@ body.rtl .faq-question {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 10, 15, 0.95);
+    background: rgba(10, 10, 15, 0.97);
     backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: var(--space-xl);
     z-index: 999;
@@ -1544,55 +1658,351 @@ body.rtl .faq-question {
   }
 
   .nav-links a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    white-space: nowrap;
   }
 
-  .mobile-toggle {
-    display: flex;
+  /* CTA inside the drawer — shown only when drawer is open */
+  .nav-links .nav-drawer-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 36px;
+    border-radius: var(--radius-full);
+    background: var(--clr-gradient-1);
+    font-size: 1rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #fff;
+    box-shadow: var(--shadow-glow);
+    margin-top: var(--space-sm);
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
+  /* ── Hero ── */
+  .hero {
+    padding-top: var(--nav-height);
+    min-height: 100dvh;
   }
 
-  .process-steps {
-    grid-template-columns: 1fr;
-    max-width: 400px;
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-xl);
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 9vw, 3rem);
+    letter-spacing: -1px;
+    line-height: 1.15;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    margin: 0 auto var(--space-lg);
+  }
+
+  /*
+    Hero action buttons:
+    • Stack vertically
+    • Width = min(100%, 340px) so on 320px screens
+      the button is 320 - 2×20px margins = 280px,
+      which comfortably holds "Start Your Project →"
+      at 0.95 rem without any wrapping.
+  */
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.875rem;
+    width: 100%;
     margin: 0 auto;
   }
 
+  .btn-primary,
+  .btn-secondary {
+    /* Responsive width: fills container up to 340px */
+    width: min(100%, 340px);
+    justify-content: center;
+    /* Comfortable horizontal padding — text has room to breathe */
+    padding: 15px 28px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    white-space: nowrap;
+    line-height: 1;
+    min-height: 50px;
+    letter-spacing: 0;
+    box-sizing: border-box;
+  }
+
   .hero-visual {
-    min-height: 300px;
+    min-height: 220px;
+    width: 100%;
+  }
+
+  .hero-mockup {
+    max-width: 100%;
   }
 
   .floating-element {
     display: none;
   }
 
+  .hero-orb-1 { width: 200px; height: 200px; left: -40px; }
+  .hero-orb-2 { width: 150px; height: 150px; right: -30px; }
+  .hero-orb-3 { width: 100px; height: 100px; }
+
   .hero-value-points {
     flex-direction: column;
     align-items: center;
     gap: var(--space-md);
+    margin-top: var(--space-xl);
+  }
+
+  .value-point {
+    justify-content: center;
+  }
+
+  /* ── Services ── */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .service-card {
+    padding: var(--space-lg);
+  }
+
+  /* ── Portfolio ── */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .portfolio-thumb {
+    aspect-ratio: 16/9;
+  }
+
+  .portfolio-info {
+    padding: var(--space-md);
+  }
+
+  /* ── Process ── */
+  .process-steps {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+    gap: var(--space-lg);
+  }
+
+  .process-steps::before {
+    display: none;
+  }
+
+  /* ── Pricing ── */
+  .pricing-simple {
+    padding: var(--space-xl) var(--space-lg);
   }
 
   .pricing-checks {
     flex-direction: column;
     align-items: center;
     gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .pricing-quote-btn {
+    display: inline-flex;
+    width: min(100%, 280px);
+    justify-content: center;
+    white-space: nowrap;
+    padding: 15px 28px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    min-height: 50px;
+    box-sizing: border-box;
+  }
+
+  /* ── CTA Section ── */
+  .cta-box {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.875rem;
+  }
+
+  .cta-buttons .btn-primary {
+    width: min(100%, 320px);
+    justify-content: center;
+    white-space: nowrap;
+    padding: 15px 28px;
+    font-size: 0.95rem;
+    min-height: 50px;
+    box-sizing: border-box;
+  }
+
+  /* ── FAQ ── */
+  .faq-question {
+    padding: var(--space-md);
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .faq-answer-inner {
+    padding: 0 var(--space-md) var(--space-md);
+  }
+
+  /* ── Contact ── */
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .contact-form {
+    padding: var(--space-lg);
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 1rem;  /* prevents iOS auto-zoom on focus */
+    padding: 13px 14px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .form-row {
     grid-template-columns: 1fr;
   }
 
+  .submit-btn {
+    white-space: nowrap;
+    font-size: 1rem;
+    padding: 15px;
+    min-height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .whatsapp-btn {
+    white-space: nowrap;
+    font-size: 0.9rem;
+    padding: 12px 24px;
+  }
+
+  /* ── Footer ── */
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
 
   .footer-bottom {
     flex-direction: column;
     gap: var(--space-sm);
     text-align: center;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE (≤480px)
+   ========================================= */
+@media (max-width: 480px) {
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 8.5vw, 2.4rem);
+    letter-spacing: -0.5px;
+  }
+
+  .hero-badge {
+    font-size: 0.68rem;
+    padding: 6px 14px;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  /* Buttons stay the same size — width:min() already handles narrower screens */
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.93rem;
+    padding: 14px 24px;
+    white-space: nowrap;
+  }
+
+  .service-card {
+    padding: 1.25rem;
+  }
+
+  .pricing-simple {
+    padding: 1.5rem 1rem;
+  }
+
+  .cta-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .lang-toggle {
+    padding: 6px 11px;
+    font-size: 0.78rem;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL (≤360px)
+   Covers 320px–360px: the tightest common
+   mobile widths. Buttons keep min(100%, 340px)
+   which resolves to full-width here, giving
+   ~280px of actual button space — enough for
+   "Start Your Project →" at 0.88rem.
+   ========================================= */
+@media (max-width: 360px) {
+
+  .container {
+    padding: 0 0.875rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.6rem, 8vw, 2.1rem);
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    /* Slightly smaller font so text fits on 320px */
+    font-size: 0.88rem;
+    padding: 13px 18px;
+    white-space: nowrap;
+    /* Full-width at this size — margins are 0.875rem each side */
+    width: 100%;
+  }
+
+  .pricing-quote-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .nav-logo .logo-icon {
+    width: 28px;
+    height: 28px;
   }
 }
 
