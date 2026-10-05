@@ -1,5 +1,5 @@
 /**
- * YourSit - Main JavaScript
+ * YourSite - Main JavaScript
  * Handles: i18n, navigation, animations, form, FAQ
  */
 
@@ -13,50 +13,50 @@ const translations = {
     "nav.work": "Work",
     "nav.process": "Process",
     "nav.contact": "Contact",
-    "nav.cta": "Submit a Request",
+    "nav.cta": "Get a Quote",
 
     // Hero
     "hero.badge": "Now Accepting New Clients",
-    "hero.title1": "Your Business.",
-    "hero.title2": "Your Website.",
-    "hero.desc": "We design and build modern, professional websites that help businesses build trust and stand out online.",
+    "hero.title1": "Professional Web Design",
+    "hero.title2": "Built for Your Business Growth",
+    "hero.desc": "We design and build modern, responsive websites and landing pages in Jordan that help businesses build trust and stand out online.",
     "hero.ctaPrimary": "Start Your Project",
     "hero.ctaSecondary": "View Our Work",
     "hero.vp1": "Modern Design",
     "hero.vp2": "Mobile Ready",
-    "hero.vp3": "Built Around Your Business",
+    "hero.vp3": "Tailored for Your Business",
     "hero.float1": "Fast Loading",
     "hero.float2": "Responsive",
     "hero.float3": "Secure",
 
     // Services
     "services.badge": "What We Do",
-    "services.title": "Websites Built for Your Business",
-    "services.desc": "From design to launch, we create professional websites tailored to your business and your customers.",
+    "services.title": "Web Design & Development Services",
+    "services.desc": "From concept to launch, we craft tailored websites and high-converting landing pages for businesses across Jordan.",
     "services.s1.title": "Website Design",
-    "services.s1.desc": "Modern and professional website designs tailored to your brand and customers.",
-    "services.s2.title": "Responsive Websites",
+    "services.s1.desc": "Modern and professional website designs tailored to companies, shops, and growing startups.",
+    "services.s2.title": "100% Responsive Websites",
     "services.s2.desc": "Websites designed to look great and work smoothly on phones, tablets, and computers.",
     "services.s3.title": "WhatsApp & Contact Integration",
-    "services.s3.desc": "Make it easy for customers to contact your business through WhatsApp, forms, and direct contact options.",
+    "services.s3.desc": "Make it easy for customers to contact your business through WhatsApp, forms, and direct calls.",
     "services.s4.title": "Domain & Hosting Setup",
-    "services.s4.desc": "We help set up your domain and hosting so your website can go live properly.",
-    "services.s5.title": "Maintenance & Updates",
-    "services.s5.desc": "We can keep your website updated and make changes when your business needs them.",
+    "services.s4.desc": "Complete setup of domain registration and high-speed hosting so your website goes live effortlessly.",
+    "services.s5.title": "Maintenance & Support",
+    "services.s5.desc": "Ongoing maintenance, speed updates, and technical support whenever your business needs them.",
 
     // Portfolio
     "portfolio.badge": "Our Work",
     "portfolio.title": "Website Concepts",
-    "portfolio.desc": "Explore examples of what we can create for different types of businesses.",
+    "portfolio.desc": "Explore examples of what we can create for different types of businesses and projects.",
     "portfolio.conceptLabel": "CONCEPT / DEMO",
     "portfolio.p1.title": "AutoCare",
-    "portfolio.p1.desc": "Website concept for an automotive service center",
+    "portfolio.p1.desc": "Commercial website concept for an automotive service center",
     "portfolio.p2.title": "Brew House",
-    "portfolio.p2.desc": "Website concept for a modern coffee shop",
+    "portfolio.p2.desc": "Website concept for a modern cafe and retail shop",
     "portfolio.p3.title": "FitZone",
-    "portfolio.p3.desc": "Website concept for a fitness business",
+    "portfolio.p3.desc": "High-converting landing page for a fitness club",
     "portfolio.p4.title": "Prime Properties",
-    "portfolio.p4.desc": "Website concept for a real estate business",
+    "portfolio.p4.desc": "Professional website concept for a real estate agency",
 
     // Process
     "process.badge": "How We Work",
@@ -64,47 +64,46 @@ const translations = {
     "process.desc": "From idea to launch in four clear steps.",
     "process.step1.title": "Tell Us What You Need",
     "process.step1.desc": "We learn about your business, goals, services, and customers.",
-    "process.step2.title": "We Build",
+    "process.step2.title": "We Design & Build",
     "process.step2.desc": "We design and build your website around your business and brand.",
     "process.step3.title": "You Review",
-    "process.step3.desc": "You review the website and request any necessary changes.",
+    "process.step3.desc": "You review the website and request any necessary adjustments.",
     "process.step4.title": "We Launch",
-    "process.step4.desc": "Once everything is approved, we help get your website online.",
+    "process.step4.desc": "Once everything is approved, we get your website live online.",
 
     // Pricing
-    "pricing.badge": "Pricing",
-    "pricing.title": "Simple, Clear Pricing",
-    "pricing.desc": "Every business is different. Tell us what you need and we'll provide a clear quote based on your website and requirements.",
-    "pricing.check1": "Clear Scope",
+    "pricing.badge": "Pricing & Costs",
+    "pricing.title": "Clear, Honest Website Pricing",
+    "pricing.desc": "Website design costs in Jordan depend on your requirements and scope. Tell us about your company or project, and we'll provide a clear, tailored quote.",
+    "pricing.check1": "Clear Scope & Pricing",
     "pricing.check2": "No Hidden Fees",
     "pricing.check3": "Built Around Your Needs",
     "pricing.cta": "Get a Quote",
 
     // CTA
     "cta.title": "Ready to Build Your Website?",
-    "cta.desc": "Let's create a professional online presence for your business.",
-    "cta.button": "Start Your Project",
+    "cta.desc": "Whether you need a web designer in Jordan or a professional website for your company or store, we're ready to bring your idea to life.",
+    "cta.button": "Start Your Project Now",
 
     // FAQ
     "faq.badge": "FAQ",
     "faq.title": "Frequently Asked Questions",
     "faq.desc": "Got questions? We've got answers.",
-    "faq.q1.question": "How long does it take to build a website?",
-    "faq.q1.answer": "Timing depends on the size and requirements of the website. After discussing your project, we'll give you an estimated timeline.",
-    "faq.q2.question": "Do I need a domain and hosting?",
-    "faq.q2.answer": "Yes, a live website normally needs a domain and hosting. We can help you set them up.",
-    "faq.q3.question": "Can you build a website for my type of business?",
-    "faq.q3.answer": "We can create websites for many types of businesses, including restaurants, automotive businesses, gyms, real estate, services, and small businesses.",
-    "faq.q4.question": "Can I request changes before the website goes live?",
-    "faq.q4.answer": "Yes. You can review the website and request changes before the final launch.",
-    "faq.q5.question": "What happens after the website is launched?",
-    "faq.q5.answer": "We can help with updates, maintenance, and future changes if needed.",
-
+    "faq.q1.question": "How long does it take to design and launch a website?",
+    "faq.q1.answer": "It depends on the size and type of the website. A landing page can take just a few days, while a full corporate website may take a bit longer. We will provide an accurate timeline after discussing your project.",
+    "faq.q2.question": "Do you handle domain and hosting setup?",
+    "faq.q2.answer": "Yes, we handle every step of building your website, from domain registration to reliable hosting setup and launch.",
+    "faq.q3.question": "Do you design websites for companies, shops, and small businesses?",
+    "faq.q3.answer": "Yes, we build websites for many industries across Jordan, including corporate websites, online shops, cafes, fitness centers, and promotional landing pages.",
+    "faq.q4.question": "How much does web design cost in Jordan?",
+    "faq.q4.answer": "Website design pricing in Jordan varies based on features and page count. We believe in complete transparency and provide an upfront, itemized quote tailored to your budget.",
+    "faq.q5.question": "Can I request revisions before and after the website launches?",
+    "faq.q5.answer": "Yes, you can review and request changes before the official launch, and we offer maintenance and support for any future updates you need.",
 
     // Contact
     "contact.badge": "Get In Touch",
     "contact.title": "Let's Build Your Website",
-    "contact.desc": "Tell us about your business and what you need. We'll get back to you to discuss your project.",
+    "contact.desc": "Looking for a web designer in Jordan or want a website for your business or project? Contact us and we will discuss details and pricing.",
     "contact.emailLabel": "Email",
     "contact.whatsappLabel": "WhatsApp",
     "contact.whatsappBtn": "Chat on WhatsApp",
@@ -115,19 +114,19 @@ const translations = {
     "contact.form.businessType": "What does your business do?",
     "contact.form.websiteType": "What type of website do you need?",
     "contact.form.selectType": "Select an option",
-    "contact.form.optBusiness": "Business Website",
+    "contact.form.optBusiness": "Business / Corporate Website",
     "contact.form.optLanding": "Landing Page",
-    "contact.form.optEcom": "Online Store",
-    "contact.form.optPortfolio": "Portfolio",
+    "contact.form.optEcom": "Online Store / Shop",
+    "contact.form.optPortfolio": "Portfolio / Project Showcase",
     "contact.form.optOther": "Other",
     "contact.form.details": "Additional Details",
     "contact.form.submit": "Send Request →",
 
     // Footer
-    "footer.desc": "Modern websites for modern businesses.",
+    "footer.desc": "Professional web design and development in Jordan for companies and modern businesses.",
     "footer.linksTitle": "Links",
     "footer.contactTitle": "Contact",
-    "footer.copyright": "© 2026 YourSit. All rights reserved."
+    "footer.copyright": "© 2026 YourSite. All rights reserved."
   },
   ar: {
     // Navigation
@@ -139,94 +138,93 @@ const translations = {
 
     // Hero
     "hero.badge": "نستقبل مشاريع جديدة الآن",
-    "hero.title1": "خلي موقعك يليق بعملك.",
-    "hero.title2": "",
-    "hero.desc": "نصمم ونبني مواقع إلكترونية حديثة واحترافية تساعد عملك على الظهور بشكل أفضل وبناء الثقة مع عملائك.",
+    "hero.title1": "تصميم مواقع إلكترونية",
+    "hero.title2": "احترافية تليق بعملك",
+    "hero.desc": "نقدم خدمات تصميم مواقع إلكترونية في الأردن للشركات والمشاريع والمحلات، لنساعدك على الظهور بمظهر احترافي وبناء ثقة متينة مع عملائك.",
     "hero.ctaPrimary": "أرسل طلبك",
     "hero.ctaSecondary": "شاهد أعمالنا",
-    "hero.vp1": "تصميم حديث",
+    "hero.vp1": "تصميم حديث ومتقن",
     "hero.vp2": "متوافق مع الجوال",
-    "hero.vp3": "مصمم لعملك",
+    "hero.vp3": "مصمم لمشروعك وعملك",
     "hero.float1": "سرعة فائقة",
     "hero.float2": "متجاوب",
     "hero.float3": "آمن",
 
     // Services
     "services.badge": "ماذا نقدم",
-    "services.title": "مواقع مبنية لعملك",
-    "services.desc": "من التصميم إلى الإطلاق، نصنع مواقع احترافية مصممة خصيصاً لعملك وعملائك.",
-    "services.s1.title": "تصميم المواقع",
-    "services.s1.desc": "تصميم حديث واحترافي يعكس هوية عملك ويقدم خدماتك بشكل واضح.",
-    "services.s2.title": "مواقع متجاوبة",
-    "services.s2.desc": "مواقع تعمل بسلاسة وتظهر بشكل رائع على الهواتف والأجهزة اللوحية والحواسيب.",
+    "services.title": "خدمات تصميم وإنشاء المواقع الإلكترونية",
+    "services.desc": "من الفكرة والتصميم إلى الإطلاق، نقدم حلول ويب متكاملة سواء كنت تريد موقعاً لشركتك أو صفحة هبوط لمشروعك.",
+    "services.s1.title": "تصميم المواقع الإلكترونية",
+    "services.s1.desc": "تصميم مواقع للشركات والمحلات والمشاريع الناشئة بهوية مميزة وتجربة تصفح سريعة وسلسة.",
+    "services.s2.title": "مواقع متجاوبة 100%",
+    "services.s2.desc": "تصميم مواقع تعمل بسلاسة وتظهر بشكل مثالي على الهواتف الذكية والأجهزة اللوحية والحواسيب.",
     "services.s3.title": "ربط واتساب ووسائل التواصل",
-    "services.s3.desc": "نسهّل على عملائك التواصل معك عبر واتساب ونماذج التواصل وخيارات الاتصال المباشر.",
+    "services.s3.desc": "نسهّل على عملائك التواصل السريع وطلب الخدمة عبر واتساب ونماذج الاتصال المباشرة.",
     "services.s4.title": "إعداد النطاق والاستضافة",
-    "services.s4.desc": "نساعدك في إعداد النطاق والاستضافة ليصبح موقعك جاهزاً للعمل.",
-    "services.s5.title": "الصيانة والتحديثات",
-    "services.s5.desc": "نجري التعديلات والتحديثات التي يحتاجها موقعك بعد الإطلاق.",
+    "services.s4.desc": "نساعدك في خطوات عمل موقع إلكتروني متكامل؛ من حجز الدومين إلى تجهيز الاستضافة السريعة والآمنة.",
+    "services.s5.title": "الصيانة والدعم الفني",
+    "services.s5.desc": "تحديثات دورية ودعم فني مستمر لضمان عمل موقعك التجاري بأفضل أداء على مدار الساعة.",
 
     // Portfolio
     "portfolio.badge": "أعمالنا",
     "portfolio.title": "نماذج مواقع",
-    "portfolio.desc": "استكشف أمثلة لمواقع مصممة لأنواع مختلفة من الأعمال.",
+    "portfolio.desc": "استكشف أمثلة لمواقع مصممة لأنواع مختلفة من الأعمال والمشاريع.",
     "portfolio.conceptLabel": "نموذج / عرض توضيحي",
     "portfolio.p1.title": "أوتو كير",
-    "portfolio.p1.desc": "نموذج موقع لمركز خدمات سيارات",
+    "portfolio.p1.desc": "تصميم موقع تجاري لمركز خدمات وصيانة سيارات",
     "portfolio.p2.title": "برو هاوس",
-    "portfolio.p2.desc": "نموذج موقع لمقهى عصري",
+    "portfolio.p2.desc": "تصميم موقع للمحلات والمقاهي العصرية",
     "portfolio.p3.title": "فت زون",
-    "portfolio.p3.desc": "نموذج موقع لنادي رياضي",
+    "portfolio.p3.desc": "تصميم صفحة هبوط Landing Page لنادٍ رياضي",
     "portfolio.p4.title": "برايم بروبرتيز",
-    "portfolio.p4.desc": "نموذج موقع لشركة عقارات",
+    "portfolio.p4.desc": "تصميم موقع لشركة عقارات واستثمار",
 
     // Process
     "process.badge": "كيف نعمل",
-    "process.title": "خطوات بسيطة",
-    "process.desc": "من الفكرة إلى الإطلاق في أربع خطوات واضحة.",
+    "process.title": "طريقة عمل واضحة",
+    "process.desc": "خطوات عملية بسيطة من أول فكرة وحتى إطلاق موقعك على الإنترنت.",
     "process.step1.title": "أخبرنا بما تحتاج",
-    "process.step1.desc": "نتعرف على عملك وأهدافك وخدماتك واحتياجاتك.",
-    "process.step2.title": "نبني",
-    "process.step2.desc": "نصمم ونبني موقعك بما يناسب عملك وعلامتك التجارية.",
-    "process.step3.title": "راجع وعدّل",
-    "process.step3.desc": "تراجع الموقع وتطلب أي تعديلات تحتاجها قبل الإطلاق.",
-    "process.step4.title": "نطلق موقعك",
-    "process.step4.desc": "بعد اعتماد التصميم والمحتوى، نساعدك في إطلاق موقعك.",
+    "process.step1.desc": "نتعرف على طبيعة عملك، أهدافك، وما تريده في موقعك الإلكتروني الجديد.",
+    "process.step2.title": "نصمم ونبني",
+    "process.step2.desc": "نقوم بتصميم وبرمجة موقعك بما يناسب هويتك التجارية وتطلعات عملائك.",
+    "process.step3.title": "تراجع وتعدّل",
+    "process.step3.desc": "تطلع على النموذج الأولي وتطلب التعديلات التي تراها مناسبة قبل الاعتماد.",
+    "process.step4.title": "إطلاق الموقع",
+    "process.step4.desc": "نطلق موقعك على الإنترنت ونربطه بالنطاق ليصبح متاحاً للجميع.",
 
     // Pricing
-    "pricing.badge": "ابدأ مشروعك",
-    "pricing.title": "أخبرنا بما تحتاج",
-    "pricing.desc": "كل عمل له احتياجات مختلفة. أخبرنا عن مشروعك وسنراجع متطلباتك ونقدم لك عرضاً مناسباً.",
-    "pricing.check1": "نطاق عمل واضح",
-    "pricing.check2": "بدون رسوم مخفية",
-    "pricing.check3": "مصمم حسب احتياجاتك",
+    "pricing.badge": "الأسعار والتكلفة",
+    "pricing.title": "تكلفة تصميم واضحة وبدون تعقيد",
+    "pricing.desc": "تعتمد تكلفة تصميم موقع إلكتروني في الأردن على متطلبات عملك وحجم الموقع. سواء كنت تريد موقعاً لشركتك أو لمشروعك، شاركنا ما تحتاجه وسنقدم لك عرض سعر مدروس وواضح.",
+    "pricing.check1": "نطاق عمل وتكلفة محددة",
+    "pricing.check2": "بدون أي رسوم خفية",
+    "pricing.check3": "مصمم خصيصاً لمشروعك",
     "pricing.cta": "أرسل طلبك",
 
     // CTA
-    "cta.title": "جاهز لبناء موقعك؟",
-    "cta.desc": "خلينا نصنع موقعاً احترافياً يعكس قيمة عملك.",
-    "cta.button": "أرسل طلبك",
+    "cta.title": "جاهز لبدء إنشاء موقعك الإلكتروني؟",
+    "cta.desc": "إذا كنت تبحث عن مصمم مواقع في الأردن أو تريد موقعاً احترافياً لشركتك ومحلك، دعنا نحول فكرتك لواقع ملموس.",
+    "cta.button": "ابدأ مشروعك الآن",
 
     // FAQ
     "faq.badge": "أسئلة شائعة",
     "faq.title": "الأسئلة المتكررة",
-    "faq.desc": "عندك أسئلة؟ عندنا إجابات.",
-    "faq.q1.question": "كم يستغرق بناء الموقع؟",
-    "faq.q1.answer": "التوقيت يعتمد على حجم ومتطلبات الموقع. بعد مناقشة مشروعك، سنعطيك جدولاً زمنياً تقديرياً.",
-    "faq.q2.question": "هل أحتاج نطاق واستضافة؟",
-    "faq.q2.answer": "نعم، الموقع الحي يحتاج عادةً نطاق واستضافة. يمكننا مساعدتك في إعدادهما.",
-    "faq.q3.question": "هل يمكنكم بناء موقع لنوع عملي؟",
-    "faq.q3.answer": "يمكننا إنشاء مواقع لأنواع عديدة من الأعمال، بما في ذلك المطاعم وخدمات السيارات والنوادي الرياضية والعقارات والخدمات والأعمال الصغيرة.",
-    "faq.q4.question": "هل يمكنني طلب تغييرات قبل إطلاق الموقع؟",
-    "faq.q4.answer": "نعم. يمكنك مراجعة الموقع وطلب التعديلات التي تحتاجها قبل الإطلاق النهائي.",
-    "faq.q5.question": "ماذا يحدث بعد إطلاق الموقع؟",
-    "faq.q5.answer": "يمكننا المساعدة في التحديثات والصيانة والتغييرات المستقبلية إذا لزم الأمر.",
-
+    "faq.desc": "إجابات واضحة ومباشرة حول خدماتنا وكيف نساعدك.",
+    "faq.q1.question": "كم يستغرق تصميم موقع إلكتروني حتى يصبح جاهزاً؟",
+    "faq.q1.answer": "يعتمد الوقت على حجم ونوع الموقع؛ فمثلاً تصميم صفحة هبوط (Landing Page) يستغرق أياماً معدودة، بينما إنشاء موقع متكامل لشركة قد يستغرق وقتاً أطول قليلاً. بعد مناقشة متطلباتك نعطيك موعداً تقديرياً دقيقاً.",
+    "faq.q2.question": "هل تتكفلون بإعداد النطاق والاستضافة؟",
+    "faq.q2.answer": "نعم، نتولى جميع خطوات عمل الموقع الإلكتروني من حجز اسم النطاق (الدومين) وتوفير الاستضافة السريعة وضبط الإعدادات ليعمل موقعك مباشرة.",
+    "faq.q3.question": "هل تقدمون تصميم مواقع للشركات والمحلات والمشاريع الصغيرة؟",
+    "faq.q3.answer": "نعم بالتأكيد، نصمم مواقع لمختلف القطاعات؛ سواء كان موقعاً لشركة، متجراً لمحلك، مركز خدمات، مطعماً، أو صفحة هبوط ترويجية لمشروع ناشئ.",
+    "faq.q4.question": "كم تكلفة أو سعر تصميم موقع إلكتروني في الأردن؟",
+    "faq.q4.answer": "تختلف أسعار تصميم المواقع في الأردن باختلاف حجم الصفحات والوظائف المطلوبة. نحرص دائماً على تقديم أسعار واضحة ومناسبة لميزانيتك، ونزودك بعرض سعر مفصل قبل البدء بالعمل.",
+    "faq.q5.question": "هل يمكنني طلب تعديلات قبل وبعد إطلاق الموقع؟",
+    "faq.q5.answer": "بالتأكيد، يمكنك مراجعة الموقع وإجراء التعديلات قبل الإطلاق الرسمي، كما نوفر خدمة الدعم الفني والصيانة لأي تحديثات مستقبلية يحتاجها عملك.",
 
     // Contact
     "contact.badge": "تواصل معنا",
-    "contact.title": "لنبني موقعك",
-    "contact.desc": "أخبرنا عن عملك وما تحتاجه، وسنتواصل معك لمناقشة مشروعك.",
+    "contact.title": "لنبني موقعك الإلكتروني",
+    "contact.desc": "سواء كنت بحاجة إلى مصمم مواقع في الأردن أو تريد موقعاً لشركتك أو مشروعك، تواصل معنا وسنرد عليك لمناقشة التفاصيل وتحديد التكلفة.",
     "contact.emailLabel": "البريد الإلكتروني",
     "contact.whatsappLabel": "واتساب",
     "contact.whatsappBtn": "تواصل عبر واتساب",
@@ -237,33 +235,33 @@ const translations = {
     "contact.form.businessType": "ماذا يقدم عملك؟",
     "contact.form.websiteType": "ما نوع الموقع الذي تحتاجه؟",
     "contact.form.selectType": "اختر خياراً",
-    "contact.form.optBusiness": "موقع أعمال",
-    "contact.form.optLanding": "صفحة هبوط",
-    "contact.form.optEcom": "متجر إلكتروني",
-    "contact.form.optPortfolio": "معرض أعمال",
+    "contact.form.optBusiness": "موقع أعمال وشركات",
+    "contact.form.optLanding": "تصميم صفحة هبوط (Landing Page)",
+    "contact.form.optEcom": "متجر إلكتروني لمحل أو تجارة",
+    "contact.form.optPortfolio": "معرض أعمال لمشروع",
     "contact.form.optOther": "أخرى",
     "contact.form.details": "تفاصيل إضافية",
-    "contact.form.submit": "إرسال الطلب →",
+    "contact.form.submit": "إرسال الطلب ←",
 
     // Footer
-    "footer.desc": "مواقع حديثة لأعمال حديثة.",
+    "footer.desc": "تصميم مواقع إلكترونية حديثة واحترافية للشركات والمشاريع في الأردن.",
     "footer.linksTitle": "روابط",
     "footer.contactTitle": "تواصل",
-    "footer.copyright": "© 2026 YourSit. جميع الحقوق محفوظة."
+    "footer.copyright": "© 2026 YourSite. جميع الحقوق محفوظة."
   }
 };
 
 // ===========================
 // State
 // ===========================
-let currentLang = localStorage.getItem("yoursit-lang") || "en";
+let currentLang = localStorage.getItem("yoursite-lang") || localStorage.getItem("yoursit-lang") || "ar";
 
 // ===========================
 // i18n Engine
 // ===========================
 function setLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem("yoursit-lang", lang);
+  localStorage.setItem("yoursite-lang", lang);
 
   const dict = translations[lang];
   if (!dict) return;
@@ -294,13 +292,13 @@ function setLanguage(lang) {
 
   // Update meta
   if (lang === "ar") {
-    document.title = "YourSit - مواقع إلكترونية للأعمال الحديثة";
+    document.title = "YourSite | تصميم مواقع إلكترونية في الأردن";
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.content = "YourSit تصمم وتبني مواقع إلكترونية حديثة واحترافية تساعد الأعمال على بناء الثقة والتميّز على الإنترنت.";
+    if (metaDesc) metaDesc.content = "خدمات تصميم مواقع إلكترونية في الأردن للشركات والمشاريع والمحلات التجارية. نصمم مواقع متجاوبة وصفحات هبوط احترافية تناسب عملك وبأسعار واضحة.";
   } else {
-    document.title = "YourSit - Websites Built for Modern Businesses";
+    document.title = "YourSite | Web Design in Jordan";
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.content = "YourSit designs and builds modern, professional websites that help businesses build trust and stand out online.";
+    if (metaDesc) metaDesc.content = "Professional web design and development services in Jordan. We design modern websites and landing pages for businesses, shops, and startups.";
   }
 }
 
@@ -539,11 +537,11 @@ function initContactForm() {
     }
 
     const websiteTypeLabels = {
-      "business" : isAr ? "موقع أعمال"    : "Business Website",
-      "landing"  : isAr ? "صفحة هبوط"     : "Landing Page",
-      "ecommerce": isAr ? "متجر إلكتروني" : "Online Store",
-      "portfolio": isAr ? "معرض أعمال"    : "Portfolio",
-      "other"    : isAr ? "أخرى"           : "Other"
+      "business" : isAr ? "موقع أعمال وشركات"             : "Business / Corporate Website",
+      "landing"  : isAr ? "تصميم صفحة هبوط (Landing Page)" : "Landing Page",
+      "ecommerce": isAr ? "متجر إلكتروني لمحل أو تجارة"    : "Online Store / Shop",
+      "portfolio": isAr ? "معرض أعمال لمشروع"              : "Portfolio",
+      "other"    : isAr ? "أخرى"                           : "Other"
     };
     const websiteTypeLabel = websiteTypeLabels[f.websiteType] || f.websiteType;
 
@@ -571,7 +569,7 @@ function initContactForm() {
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body   : JSON.stringify({
           access_key               : W3F_ACCESS_KEY,
-          subject                  : "طلب موقع جديد - YourSit",
+          subject                  : "طلب موقع جديد - YourSite",
           from_name                : f.name,
           email                    : "yoursite.jo@gmail.com",
           message                  : emailBody,
