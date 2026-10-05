@@ -290,15 +290,14 @@ function setLanguage(lang) {
     }
   });
 
-  // Update meta
-  if (lang === "ar") {
-    document.title = "YourSite | تصميم مواقع إلكترونية في الأردن";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.content = "خدمات تصميم مواقع إلكترونية في الأردن للشركات والمشاريع والمحلات التجارية. نصمم مواقع متجاوبة وصفحات هبوط احترافية تناسب عملك وبأسعار واضحة.";
-  } else {
-    document.title = "YourSite | Web Design in Jordan";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.content = "Professional web design and development services in Jordan. We design modern websites and landing pages for businesses, shops, and startups.";
+  // Update meta description
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) {
+    if (lang === "ar") {
+      metaDesc.content = "خدمات تصميم مواقع إلكترونية في الأردن للشركات والمشاريع والمحلات التجارية. نصمم مواقع متجاوبة وصفحات هبوط احترافية تناسب عملك وبأسعار واضحة.";
+    } else {
+      metaDesc.content = "Professional web design and development services in Jordan. We design modern websites and landing pages for businesses, shops, and startups.";
+    }
   }
 }
 
