@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /test-form.html
 
-Sitemap: https://abdalmhemnsloom-debug.github.io/yoursite/sitemap.xml
+Sitemap: https://www.yoursiteuae.online/sitemap.xml

@@ -297,8 +297,14 @@ function setLanguage(lang) {
   const ogTitle = document.querySelector('meta[property="og:title"]');
   const ogDesc = document.querySelector('meta[property="og:description"]');
   const ogLocale = document.querySelector('meta[property="og:locale"]');
+  const ogUrl = document.querySelector('meta[property="og:url"]');
   const twitterTitle = document.querySelector('meta[name="twitter:title"]');
   const twitterDesc = document.querySelector('meta[name="twitter:description"]');
+  const twitterUrl = document.querySelector('meta[name="twitter:url"]');
+
+  const siteUrl = "https://www.yoursiteuae.online/";
+  if (ogUrl) ogUrl.content = siteUrl;
+  if (twitterUrl) twitterUrl.content = siteUrl;
 
   if (lang === "ar") {
     document.title = "YourSite | تصميم مواقع إلكترونية في الأردن";
