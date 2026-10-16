@@ -12,6 +12,7 @@ const translations = {
     "nav.services": "Services",
     "nav.work": "Work",
     "nav.process": "Process",
+    "nav.blog": "Knowledge",
     "nav.contact": "Contact",
     "nav.cta": "Get a Quote",
 
@@ -133,6 +134,7 @@ const translations = {
     "nav.services": "خدماتنا",
     "nav.work": "أعمالنا",
     "nav.process": "طريقة العمل",
+    "nav.blog": "المعرفة",
     "nav.contact": "تواصل معنا",
     "nav.cta": "أرسل طلبك",
 
@@ -302,28 +304,32 @@ function setLanguage(lang) {
   const twitterDesc = document.querySelector('meta[name="twitter:description"]');
   const twitterUrl = document.querySelector('meta[name="twitter:url"]');
 
-  const siteUrl = "https://www.yoursiteuae.online/";
-  if (ogUrl) ogUrl.content = siteUrl;
-  if (twitterUrl) twitterUrl.content = siteUrl;
+  // Only override default homepage SEO tags if we're not on a dedicated blog/article page
+  const isCustomSeoPage = document.body.dataset.page === "blog" || document.body.dataset.page === "article";
+  if (!isCustomSeoPage) {
+    const siteUrl = "https://www.yoursiteuae.online/";
+    if (ogUrl) ogUrl.content = siteUrl;
+    if (twitterUrl) twitterUrl.content = siteUrl;
 
-  if (lang === "ar") {
-    document.title = "YourSite | تصميم مواقع إلكترونية في الأردن";
-    const arDesc = "YourSite لتصميم مواقع إلكترونية احترافية للشركات والمحلات والمشاريع في الأردن، مع تصميم متجاوب للهواتف وربط واتساب ووسائل التواصل.";
-    if (metaDesc) metaDesc.content = arDesc;
-    if (ogTitle) ogTitle.content = "YourSite | تصميم مواقع إلكترونية في الأردن";
-    if (ogDesc) ogDesc.content = arDesc;
-    if (ogLocale) ogLocale.content = "ar_JO";
-    if (twitterTitle) twitterTitle.content = "YourSite | تصميم مواقع إلكترونية في الأردن";
-    if (twitterDesc) twitterDesc.content = arDesc;
-  } else {
-    document.title = "YourSite | Website Design in Jordan";
-    const enDesc = "YourSite designs professional websites for businesses and small businesses in Jordan, with responsive layouts and WhatsApp integration.";
-    if (metaDesc) metaDesc.content = enDesc;
-    if (ogTitle) ogTitle.content = "YourSite | Website Design in Jordan";
-    if (ogDesc) ogDesc.content = enDesc;
-    if (ogLocale) ogLocale.content = "en_US";
-    if (twitterTitle) twitterTitle.content = "YourSite | Website Design in Jordan";
-    if (twitterDesc) twitterDesc.content = enDesc;
+    if (lang === "ar") {
+      document.title = "YourSite | تصميم مواقع إلكترونية في الأردن";
+      const arDesc = "YourSite لتصميم مواقع إلكترونية احترافية للشركات والمحلات والمشاريع في الأردن، مع تصميم متجاوب للهواتف وربط واتساب ووسائل التواصل.";
+      if (metaDesc) metaDesc.content = arDesc;
+      if (ogTitle) ogTitle.content = "YourSite | تصميم مواقع إلكترونية في الأردن";
+      if (ogDesc) ogDesc.content = arDesc;
+      if (ogLocale) ogLocale.content = "ar_JO";
+      if (twitterTitle) twitterTitle.content = "YourSite | تصميم مواقع إلكترونية في الأردن";
+      if (twitterDesc) twitterDesc.content = arDesc;
+    } else {
+      document.title = "YourSite | Website Design in Jordan";
+      const enDesc = "YourSite designs professional websites for businesses and small businesses in Jordan, with responsive layouts and WhatsApp integration.";
+      if (metaDesc) metaDesc.content = enDesc;
+      if (ogTitle) ogTitle.content = "YourSite | Website Design in Jordan";
+      if (ogDesc) ogDesc.content = enDesc;
+      if (ogLocale) ogLocale.content = "en_US";
+      if (twitterTitle) twitterTitle.content = "YourSite | Website Design in Jordan";
+      if (twitterDesc) twitterDesc.content = enDesc;
+    }
   }
 }
 
@@ -383,6 +389,7 @@ function initNavbar() {
 // ===========================
 function initLangToggle() {
   const langToggle = document.getElementById("langToggle");
+  if (!langToggle) return;
   langToggle.addEventListener("click", () => {
     setLanguage(currentLang === "en" ? "ar" : "en");
   });
@@ -450,6 +457,7 @@ function initContactForm() {
 
   const form     = document.getElementById("contactForm");
   const statusEl = document.getElementById("formStatus");
+  if (!form || !statusEl) return;
 
   // ── Helper: show / clear inline field error ────────────────────────
   function setError(inputEl, errId, msg) {
@@ -669,6 +677,123 @@ function initActiveNavLink() {
 }
 
 // ===========================
+// Blog Category Filter
+// ===========================
+function initCategoryFilter() {
+  const filterBtns = document.querySelectorAll(".category-btn");
+  const blogCards = document.querySelectorAll(".blog-grid .blog-card");
+  const featuredSection = document.getElementById("blogFeatured") || document.querySelector(".blog-featured");
+  const resultsHeader = document.getElementById("categoryResultsHeader");
+  const selectedTitle = document.getElementById("selectedCategoryTitle");
+  const selectedCount = document.getElementById("selectedCategoryCount");
+  const resetBtn = document.getElementById("resetCategoryBtn");
+  const emptyState = document.getElementById("categoryEmptyState");
+  const emptyResetBtn = document.getElementById("emptyStateResetBtn");
+  const articlesGrid = document.getElementById("articlesGrid");
+
+  if (!filterBtns.length || !blogCards.length) return;
+
+  const categoryNames = {
+    "all": "جميع المقالات",
+    "web-design": "تصميم وبناء المواقع",
+    "business-importance": "أهمية المواقع للأعمال",
+    "pricing": "أسعار وتكاليف المواقع",
+    "seo": "تحسين محركات البحث SEO",
+    "ux-mobile": "تجربة المستخدم والهواتف",
+    "small-business": "نصائح للمشاريع الصغيرة"
+  };
+
+  function applyCategory(targetCat, shouldScroll = false) {
+    // 1. Update button states
+    filterBtns.forEach(b => {
+      const isMatch = b.getAttribute("data-category") === targetCat;
+      b.classList.toggle("active", isMatch);
+      b.setAttribute("aria-selected", isMatch ? "true" : "false");
+    });
+
+    let visibleCount = 0;
+
+    // 2. Filter blog grid cards
+    blogCards.forEach(card => {
+      const cardCats = (card.getAttribute("data-category") || "").split(/\s+/);
+      const isVisible = targetCat === "all" || cardCats.includes(targetCat);
+
+      if (isVisible) {
+        card.style.display = "flex";
+        card.classList.add("visible");
+        visibleCount++;
+      } else {
+        card.style.display = "none";
+        card.classList.remove("visible");
+      }
+    });
+
+    // 3. Featured card visibility
+    if (featuredSection) {
+      if (targetCat === "all") {
+        featuredSection.style.display = "";
+      } else {
+        featuredSection.style.display = "none";
+      }
+    }
+
+    // 4. Update Header Banner & Empty State
+    if (targetCat === "all") {
+      if (resultsHeader) resultsHeader.style.display = "none";
+      if (emptyState) emptyState.style.display = "none";
+      if (articlesGrid) articlesGrid.style.display = "";
+    } else {
+      const catLabel = categoryNames[targetCat] || targetCat;
+      if (resultsHeader) {
+        resultsHeader.style.display = "flex";
+        if (selectedTitle) selectedTitle.textContent = catLabel;
+        if (selectedCount) {
+          selectedCount.textContent = visibleCount > 0 
+            ? `يتم عرض ${visibleCount} مقالًا ضمن هذا التصنيف` 
+            : "لا توجد نتائج مطابقة";
+        }
+      }
+
+      if (visibleCount === 0) {
+        if (emptyState) emptyState.style.display = "block";
+        if (articlesGrid) articlesGrid.style.display = "none";
+      } else {
+        if (emptyState) emptyState.style.display = "none";
+        if (articlesGrid) articlesGrid.style.display = "";
+      }
+    }
+
+    // Optional smooth scroll to results
+    if (shouldScroll && resultsHeader && targetCat !== "all") {
+      resultsHeader.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  // Click handler for category buttons
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetCat = btn.getAttribute("data-category") || "all";
+      applyCategory(targetCat, false);
+    });
+  });
+
+  // Reset buttons
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => applyCategory("all", false));
+  }
+  if (emptyResetBtn) {
+    emptyResetBtn.addEventListener("click", () => applyCategory("all", false));
+  }
+
+  // Check URL query param or hash (e.g. ?cat=seo or #seo)
+  const urlParams = new URLSearchParams(window.location.search);
+  const catParam = urlParams.get("cat") || window.location.hash.replace("#", "");
+  if (catParam && categoryNames[catParam]) {
+    applyCategory(catParam, false);
+  }
+}
+
+// ===========================
 // Init Everything
 // ===========================
 document.addEventListener("DOMContentLoaded", () => {
@@ -679,4 +804,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initFAQ();
   initContactForm();
   initActiveNavLink();
+  initCategoryFilter();
 });

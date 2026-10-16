@@ -1,13 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://www.yoursiteuae.online/</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.yoursiteuae.online/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.yoursiteuae.online/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.yoursiteuae.online/" />
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- صفحة المعرفة الرئيسية -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 1. أهمية الموقع الإلكتروني لنشاطك التجاري -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/importance-of-website-for-business/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 2. تصميم مواقع إلكترونية في الأردن -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/web-design-jordan-guide/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 3. كم تكلفة إنشاء موقع إلكتروني في الأردن -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/website-cost-in-jordan/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 4. كيف يساعد الموقع الإلكتروني على بناء الثقة مع العملاء -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/building-trust-with-website/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 5. لماذا يحتاج مشروعك الصغير إلى موقع إلكتروني -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/why-small-business-needs-website/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 6. كيف تحصل على عملاء جدد من خلال موقعك الإلكتروني -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/how-to-get-clients-from-website/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 7. الفرق بين الموقع التعريفي وصفحة الهبوط والمتجر الإلكتروني -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/landing-page-vs-corporate-vs-ecommerce/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 8. كيف تختار شركة تصميم مواقع مناسبة -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/how-to-choose-web-design-company/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 9. أهمية تصميم المواقع المتوافقة مع الهواتف -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/mobile-responsive-web-design/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 10. كيف تساعد تهيئة محركات البحث SEO على اكتشاف موقعك -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/seo-basics-for-local-business/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 11. ما الذي يجب أن يحتويه الموقع الإلكتروني الاحترافي -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/what-professional-website-must-have/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 12. هل تحتاج إلى دفع رسوم شهرية بعد تصميم موقعك -->
+  <url>
+    <loc>https://www.yoursiteuae.online/blog/website-recurring-costs-monthly-fees/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
